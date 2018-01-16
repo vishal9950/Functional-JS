@@ -9,6 +9,9 @@ function repeat(operation, num) {
   if(!check1){
     return false;
   }
+  else {
+    return true;
+  }
 }
 
 function verifyIfNumber(num) {
@@ -23,3 +26,4 @@ function verifyIfNumber(num) {
 module.exports = repeat;
 
 console.log('#TC1: Should be false if second argument is not a number: ', repeat(operation, 'hg') === false);
+console.log('#TC2: Should be true for proper args: ', repeat(operation, 12) === true);
