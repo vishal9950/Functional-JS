@@ -4,7 +4,6 @@ function doubleAll(numbers) {
   return map1;
 }
 
-//module.exports = doubleAll;
 function areArraysEqual(first, second) {
   let flag = 1;
   for (let i = 0; i < first.length; i++) {
@@ -19,4 +18,7 @@ function areArraysEqual(first, second) {
     return false;
   }
 }
+
+//module.exports = doubleAll;
+
 console.log('#TC1: Should be true for proper args: ', areArraysEqual(doubleAll([1,2,3,4]), [ 2, 4, 6, 8]));
