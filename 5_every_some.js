@@ -1,6 +1,8 @@
 function checkUsersValid(goodUsers) {
   function areGoodUsers(testUsers) {
-    let result = goodUsers.some(goodUser => goodUser.id === testUsers.id);
+    let result = goodUsers.some(function test(goodUser){
+      return goodUser.id === testUsers.id;
+    });
     return result;
   }
 
@@ -11,15 +13,15 @@ function checkUsersValid(goodUsers) {
 
 // module.exports = checkUsersValid;
 
-var goodUsers = [
+let goodUsers = [
   { id : 1},
   { id : 2},
   { id : 3}
 ];
 
-var submittedUsers = [
+let submittedUsers = [
   { id : 1},
   { id : 3}
 ]
 
-console.log('Should be true for proper args: ', checkUsersValid(goodUsers)(submittedUsers) === true);
+console.log('#TC1: Should be true for proper args: ', checkUsersValid(goodUsers)(submittedUsers) === true);
