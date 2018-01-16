@@ -9,7 +9,7 @@ function checkUsersValid(goodUsers) {
   }
 }
 
-module.exports = checkUsersValid;
+// module.exports = checkUsersValid;
 
 var goodUsers = [
   { id : 1},
