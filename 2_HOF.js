@@ -10,8 +10,12 @@ function repeat(operation, num) {
     return false;
   }
   else {
-    return true;
-  }
+    while(num--){
+      operation();
+    }
+{
+
+}  }
 }
 
 function verifyIfNumber(num) {
@@ -23,7 +27,7 @@ function verifyIfNumber(num) {
   }
 }
 
-module.exports = repeat;
+//module.exports = repeat;
 
 console.log('#TC1: Should be false if second argument is not a number: ', repeat(operation, 'hg') === false);
 console.log('#TC2: Should be true for proper args: ', repeat(operation, 12) === true);
