@@ -6,7 +6,7 @@ function getShortMessages(messages) {
   return moreFiltered;
 }
 
-module.exports = getShortMessages;
+//module.exports = getShortMessages;
 
 let object = [
   {
