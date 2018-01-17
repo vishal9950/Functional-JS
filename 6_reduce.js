@@ -6,7 +6,7 @@ function countWords(inputWords) {
     let result = {};
     let countedWords = inputWords.reduce(function functionName(result, name) {
       if(result[name]){
-        result[name] ++;
+        result[name] += 1;
       }
       else {
         result[name] = 1;
