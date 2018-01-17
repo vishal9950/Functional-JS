@@ -32,7 +32,7 @@ function areObjectsEqual(first, second) {
   }
 }
 
-module.exports = countWords;
+//module.exports = countWords;
 
 console.log('Should not work for empty array: ', countWords([]) === false);
 
