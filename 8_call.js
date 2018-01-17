@@ -15,7 +15,7 @@ function duckCount() {
 	return res;
 }
 
-module.exports = duckCount;
+// module.exports = duckCount;
 
 console.log('Should be true for no args: ', duckCount() === false);
 let test1 = {quack: true};
