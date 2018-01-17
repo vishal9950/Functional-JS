@@ -17,19 +17,17 @@ function countWords(inputWords) {
 	}
 }
 
-function areObjectsEqual(first, second) {
-  let flag = 1;
-  for (let i = 0; i < first.length; i++) {
-    if(first[i] != second[i]){
-      flag = 0;
+function areObjectsEqual(input, result, expected) {
+  let set = new Set(input);
+  for (let item of set) {
+    if(result[item] === expected[item]){
+      continue;
+    }
+    else {
+      return false;
     }
   }
-  if(flag === 1){
-    return true;
-  }
-  else {
-    return false;
-  }
+  return true;
 }
 
 //module.exports = countWords;
@@ -37,4 +35,4 @@ function areObjectsEqual(first, second) {
 console.log('Should not work for empty array: ', countWords([]) === false);
 
 let check = { Apple: 2, Banana: 1, Durian: 3 };
-console.log('Should work for proper args: ', areObjectsEqual(countWords(['Apple', 'Banana', 'Apple', 'Durian', 'Durian', 'Durian']),check));
+console.log('Should work for proper args: ', areObjectsEqual(['Apple', 'Banana', 'Apple', 'Durian', 'Durian', 'Durian'], countWords(['Apple', 'Banana', 'Apple', 'Durian', 'Durian', 'Durian']),check));
