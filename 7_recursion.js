@@ -2,11 +2,9 @@ function reduce(arr, fn, initial, ind=0) {
 	if (arr.length === 0) {
 		return initial;
 	}
-	else {
-		if(arr.length === ind) return initial;
-		let curr = fn(initial, arr[ind], ind, arr);
-    return reduce(arr, fn, curr, ++ind);
-	}
+	if(arr.length === ind) return initial;
+	let curr = fn(initial, arr[ind], ind, arr);
+  return reduce(arr, fn, curr, ++ind);
 }
 
 module.exports = reduce;
