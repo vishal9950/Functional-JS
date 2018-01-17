@@ -1,9 +1,9 @@
 function upperCaser(a) {
-  if (a.length === 0) {
-    console.log('Err 1: Empty string supplied!');
-    return false;
-  }
-  return a.toUpperCase();
+	if (a.length === 0) {
+		console.log('Err 1: Empty string supplied!');
+		return false;
+	}
+	return a.toUpperCase();
 }
 
 //module.exports = upperCaser;
