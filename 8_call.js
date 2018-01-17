@@ -21,3 +21,5 @@ console.log('Should be true for no args: ', duckCount() === false);
 let test1 = {quack: true};
 let test2 = {quack: false};
 console.log('Should work for proper args: ', duckCount(test1,test2) === 2);
+test2 = Object.create({quack: true});
+console.log('Should work for proper args returning 1: ', duckCount(test1,test2) === 1);
