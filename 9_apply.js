@@ -32,6 +32,7 @@ function logger(namespace) {
 // 	// return namespace + msg;
 // }
 
+//logger('INFO:')('sample', 'text')
 module.exports = logger;
 
 // let info = logger(print, 'INFO:');
@@ -40,8 +41,11 @@ module.exports = logger;
 
 
 // testcases
-//console.log('Should not work for empty arguments: ', logger('INFO:')() === false);
+
+
+//console.log('Should not work for empty arguments: ', false);
 // console.log('Should work for \'WARN\' and \'Info Msg\': ', false);
 // console.log('Should not work for \'\' and \'Info Msg\': ', false);
 // console.log('Should work for \'WARN\' and \'\': ', false);
+
 // console.log('Should not work if array-lists provided to apply: ', false);
