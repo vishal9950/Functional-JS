@@ -8,7 +8,8 @@ function duckCount() {
 	let values = Object.values(arguments);
 	// console.log(Object.prototype.hasOwnProperty.call(arguments[0], 'quack'));
 	let res = values.reduce(function hasQuack(count, value) {
-	  if(Object.prototype.hasOwnProperty.call(value, 'quack')){
+	  // if(Object.prototype.hasOwnProperty.call(value, 'quack')){
+		if(value.hasOwnProperty('quack')){
 	    count += 1;
 	  }
 	  return count;
@@ -30,3 +31,12 @@ console.log('Should work for 1 duck and 1 not duck: ', duckCount(test1, test2) =
 
 test1 = Object.create({quack: true});
 console.log('Should work for both not ducks: ', duckCount(test1, test2) === 0);
+
+// test hasOwnProperty
+test1 = {quack: true,
+				hasOwnProperty: function () {
+					return false;
+				}
+};
+console.log('hasOwnProperty: ', test1.hasOwnProperty('quack'));
+console.log('Object.prototype.hasOwnProperty: ', Object.prototype.hasOwnProperty.call(test1, 'quack'));

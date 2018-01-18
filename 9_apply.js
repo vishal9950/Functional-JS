@@ -48,4 +48,4 @@ module.exports = logger;
 // console.log('Should not work for \'\' and \'Info Msg\': ', false);
 // console.log('Should work for \'WARN\' and \'\': ', false);
 
-// console.log('Should not work if array-lists provided to apply: ', false);
+// console.log('Should not work if array-objects provided to apply: ', false);
