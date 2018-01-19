@@ -1,12 +1,12 @@
 function repeat(operation, num) {
 	// modify this so it can be interrupted
-	if (num % 10 === 0){
+	if (num % 20 === 0){
 		setTimeout(function() {
-			return repeat(operation, --num);
+			repeat(operation, --num);
 		});
 	}
 	else {
-		return repeat(operation, --num);
+		repeat(operation, --num);
 	}
 	operation();
 	//return repeat(operation, --num);
