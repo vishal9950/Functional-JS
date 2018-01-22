@@ -1,9 +1,12 @@
 module.exports = {
     "env": {
+        "browser": true,
         "node": true
     },
     "extends": "eslint:recommended",
     "rules": {
+        "no-undef": 0,
+        "no-console": 0,
         "indent": [
             "error",
             "tab"
@@ -12,7 +15,6 @@ module.exports = {
             "error",
             "unix"
         ],
-        "no-console": 0,
         "quotes": [
             "error",
             "single"
